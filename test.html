@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar & General Landing Page Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans">
+
+    <nav class="bg-slate-900/90 backdrop-blur-md text-white sticky top-0 z-50 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                
+                <div class="text-xl font-bold tracking-wider text-indigo-400">
+                    Nexus<span class="text-white">Corp_</span>
+                </div>
+
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#overview" class="text-slate-300 hover:text-indigo-400 transition duration-200">Overview</a>
+                    <a href="#services" class="text-slate-300 hover:text-indigo-400 transition duration-200">Services</a>
+                    <a href="#contact" class="text-slate-300 hover:text-indigo-400 transition duration-200">Contact</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="hamburger" class="text-slate-300 hover:text-white focus:outline-none text-2xl">
+                        ☰
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 px-6 py-4 space-y-3 border-t border-slate-700">
+            <a href="#overview" class="block text-slate-300 hover:text-indigo-400 py-1">Overview</a>
+            <a href="#services" class="block text-slate-300 hover:text-indigo-400 py-1">Services</a>
+            <a href="#contact" class="block text-slate-300 hover:text-indigo-400 py-1">Contact</a>
+        </div>
+    </nav>
+
+
+    <section id="overview" class="min-h-screen flex items-center justify-center px-6 pt-16">
+        <div class="max-w-4xl text-center">
+            <span class="text-indigo-400 font-mono text-sm tracking-widest uppercase">Welcome to the Next Generation</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mt-2 mb-4 tracking-tight">
+                Modern Solutions For Your Digital Presence.
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                We craft clean user interfaces, organize robust data structures, and deploy seamless corporate web solutions engineered to scale.
+            </p>
+            <a href="#services" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold px-8 py-3 rounded transition duration-200">
+                Explore Services
+            </a>
+        </div>
+    </section>
+
+
+    <section id="services" class="min-h-screen flex items-center bg-slate-800/50 px-6 py-20">
+        <div class="max-w-5xl mx-auto w-full">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Our Core Offerings</h2>
+                <p class="text-slate-400">Discover how we help enterprises transform their digital capabilities.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-800 p-8 rounded-xl border border-slate-700/50">
+                    <h3 class="text-xl font-bold text-indigo-400 mb-4">Design & Layout</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Creating exceptional user experiences with fully responsive architectures that render perfectly on mobile, tablet, and desktop viewports.
+                    </p>
+                </div>
+                <div class="bg-slate-800 p-8 rounded-xl border border-slate-700/50">
+                    <h3 class="text-xl font-bold text-purple-400 mb-4">Development</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Engineering solid backend infrastructure, handling relational databases securely, and building optimized, logic-driven systems.
+                    </p>
+                </div>
+                <div class="bg-slate-800 p-8 rounded-xl border border-slate-700/50">
+                    <h3 class="text-xl font-bold text-pink-400 mb-4">Deployment</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Streamlining version control workflow pipelines via GitHub and hosting final applications on reliable cloud platform architecture.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="min-h-screen flex items-center px-6 py-20">
+        <div class="max-w-xl mx-auto w-full bg-slate-800 p-8 rounded-2xl border border-slate-700/50 shadow-xl">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-white mb-2">Get In Touch</h2>
+                <p class="text-slate-400 text-sm">Have a project or questions? Leave a message below.</p>
+            </div>
+
+            <form class="space-y-4" onsubmit="event.preventDefault();">
+                <div>
+                    <label class="block text-xs font-mono tracking-wider text-slate-400 uppercase mb-2">Name</label>
+                    <input type="text" placeholder="John Doe" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-indigo-500 transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-mono tracking-wider text-slate-400 uppercase mb-2">Email</label>
+                    <input type="email" placeholder="john@example.com" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-indigo-500 transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-mono tracking-wider text-slate-400 uppercase mb-2">Message</label>
+                    <textarea rows="4" placeholder="Your message here..." class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-indigo-500 transition"></textarea>
+                </div>
+                <button class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 rounded-lg transition duration-200">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+    <script>
+        const btn = document.getElementById('hamburger');
+        const menu = document.getElementById('mobile-menu');
+
+        // Toggle mobile menu visibility
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Automatically close the mobile menu dropdown whenever a section link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
